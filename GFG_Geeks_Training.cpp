@@ -1,3 +1,7 @@
+// Approach is watching the previous last step {last}
+// Finding the maximum of the task
+// 3rd task would be denoting the last step that no task is performed right now
+// Indexed from 0...3
 class Solution {
 public:
     int func(int day, int last, vector<vector<int>>& arr, vector<vector<int>>& dp) {
