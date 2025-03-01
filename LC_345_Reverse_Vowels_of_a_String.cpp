@@ -1,3 +1,40 @@
+// My approach
+class Solution {
+public:
+    bool isvowel(char x) {
+        if (x == 'a' || x == 'e' || x == 'i' || x == 'o' || x == 'u' ||
+            x == 'A' || x == 'E' || x == 'I' || x == 'O' || x == 'U') {
+            return true;
+        }
+        return false;
+    }
+    string reverseVowels(string s) {
+        int i = 0;
+        int j = s.size() - 1;
+        while (i <= j) {
+            if (isvowel(s[i]) && isvowel(s[j])) {
+                swap(s[i], s[j]);
+                i++;
+                j--;
+            } 
+            else if (isvowel(s[i]) && !isvowel(s[j])) {
+                j--;
+            } 
+            else {
+                i++;
+            }
+        }
+        return s;
+    }
+};
+
+
+
+
+
+
+
+
 class Solution {
 public:
     string reverseVowels(string s) {
